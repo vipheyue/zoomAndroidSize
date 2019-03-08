@@ -1,11 +1,22 @@
 # zoomAndroidSize
-批量调整Android布局大小
+抽取layout布局文件 及style.xml 中的硬编码 dp sp dip 到dimens.xml
 
-处理两代设备屏幕密度问题导致的显示问题 (layout布局调整)
 
-    1.计算两代屏幕密度比例 在deal_dpsp调整比例
+
+    一:重构
+    *.打开extract.py 填写输入 输出文件夹等5项   然后执行 python3 extract.py
     
-    2.在run.py main里填写输入输出文件夹
+    *.复制输出的dimens.xml文件中的内容  添加到原dimens.xml
     
-    3.python3 绝对路径/run.py
+    *.替换layout下所有文件 替换style.xml文件  然后就可以跑起来了
+    
+    
+    二:兼容新设备
+    *.计算两代屏幕密度比例 在run.py deal_dpsp中调整比例. (我们目前已经调好 1.7)
+    *.在run.py 里面填写 新 老 设备的dimens.xml地址  然后执行 python3 run.py
+    *.复制新的dimens.xml到对应尺寸文件夹 比如 values-1280x800 
+    *.建议生成的dimens.xml中的 关于style部分的dp sp dip 暂时注释调 手动调整
+    
+    
+   
 
