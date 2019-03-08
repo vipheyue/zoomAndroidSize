@@ -4,6 +4,8 @@
 
 
     一:重构
+    *.建议使用 在之前设备上无问题的代码进行操作
+    
     *.打开extract.py 填写输入 输出文件夹等5项   然后执行 python3 extract.py
     
     *.复制输出的dimens.xml文件中的内容  添加到原dimens.xml
