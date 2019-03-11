@@ -16,7 +16,7 @@
     二:兼容新设备
     *.计算两代屏幕密度比例 在run.py deal_dpsp中调整比例. (我们目前已经调好 1.7)
     *.在run.py 里面填写 新 老 设备的dimens.xml地址  然后执行 python3 run.py
-    *.替换dimens.xml文件即可  
+    *.替换dimens.xml文件即可  之前的备份到values-1280x800目录 dimens.xml
     *.建议生成的dimens.xml中的 关于style部分的dp sp dip 暂时注释调 手动调整
     
     
