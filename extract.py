@@ -121,13 +121,13 @@ if __name__ == '__main__':
     其他: 遇到.ds 文件报错 用命令行删除.ds即可
     """
 
-    dimens_xml_file = "/Users/heyue/Desktop/testPy/beeboxes/packages/apps/Settings/app/src/main/res/values-1280x800/dimens.xml"  # 输出dimens.xml文件 之后需要手动粘贴
+    dimens_xml_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values-1280x800/dimens.xml"  # 输出dimens.xml文件 之后需要手动粘贴
 
-    inputDir = "/Users/heyue/Desktop/testPy/beeboxes/packages/apps/Settings/app/src/main/res/layout"  # layout  输入文件夹
-    outputDir = "/Users/heyue/Desktop/img"  # layout 输出文件夹
+    inputDir = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/layout"  # layout  输入文件夹
+    outputDir = r"/Users/heyue/Desktop/img"  # layout 输出文件夹
     extra_layout(inputDir, outputDir)# 抽取layout
 
 
-    input_style_file = "/Users/heyue/Desktop/testPy/beeboxes/packages/apps/Settings/app/src/main/res/values/styles.xml"  # style.xml文件
-    output_style_file = "/Users/heyue/Desktop/styles.xml"  # style.xml文件
+    input_style_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values/styles.xml"  # style.xml文件
+    output_style_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values-1280x800/styles.xml"  # style.xml文件
     extra_style(input_style_file, output_style_file)# 抽取style.xml

@@ -56,8 +56,8 @@ if __name__ == '__main__':
     """
     对mimens.xml 进行 倍增
     """
-    old_file = "/Users/heyue/Desktop/testPy/beeboxes/packages/apps/Settings/app/src/main/res/values-1280x800/dimens.xml" # 老的style 或者 dimens文件
-    new_file = "/Users/heyue/Desktop/dimens.xml"# 新的 新尺寸的 dimens文件
+    old_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values-1280x800/dimens.xml" # 老的style 或者 dimens文件
+    new_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values-1200x720/dimens.xml"# 新的 新尺寸的 dimens文件
     result_content=del_style_xml(old_file)
     with open(new_file, "w", encoding='utf-8') as f:
         f.write(result_content)
