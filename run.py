@@ -27,7 +27,7 @@ def del_style_xml(src_file):
 def deal_dpsp(text, symbol):
     """"
     计算上一代屏幕密度
-    计算当前一代屏幕密度 得到比例1.7
+    计算当前一代屏幕密度 得到比例
 
     处理数值
     66dp or 66sp
@@ -42,7 +42,7 @@ def deal_dpsp(text, symbol):
             deal_text = text[:dp_index]  # 取数字
             deal_text = int(float(deal_text)) #非数字直接跑异常返回原内容即可
             if deal_text > 4:
-                deal_text = int(deal_text / 1.7)
+                deal_text = int(deal_text / 1.37)
                 replace_text = str(deal_text) + symbol
                 return replace_text
             else:
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     """
     对mimens.xml 进行 倍增
     """
-    old_file = "/Users/heyue/Desktop/testPy/beeboxes/packages/apps/Settings/app/src/main/res/values-720x1280/dimens.xml" # 老的style 或者 dimens文件
+    old_file = "/Users/heyue/Desktop/testPy/beeboxes/packages/apps/Settings/app/src/main/res/values-1280x800/dimens.xml" # 老的style 或者 dimens文件
     new_file = "/Users/heyue/Desktop/dimens.xml"# 新的 新尺寸的 dimens文件
     result_content=del_style_xml(old_file)
     with open(new_file, "w", encoding='utf-8') as f:
