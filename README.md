@@ -20,5 +20,10 @@
     *.建议生成的dimens.xml中的 关于style部分的dp sp dip 暂时注释调 手动调整
     
     
+    三:批量调整图片大小
+    *.pip install -r requirements.txt
+    *.填写输入输出文件夹,运行 python3 zoomPic.py
+
+    
    
 
