@@ -47,6 +47,7 @@ def extract_detail(text, symbol, extra_line_name):
                 replace_text = "@dimen/" + extra_line_name
 
                 dimens_content = f'<dimen name="{extra_line_name}">{text}</dimen>\r\n'
+                # dimens_content = '<dimen name="%s">%s</dimen>\r\n' % (extra_line_name, text)
                 # 在dimens.xml中添加
                 with open(dimens_xml_file, "a", encoding='utf-8') as f:
                     f.write(dimens_content)
@@ -125,9 +126,8 @@ if __name__ == '__main__':
 
     inputDir = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/layout"  # layout  输入文件夹
     outputDir = r"/Users/heyue/Desktop/img"  # layout 输出文件夹
-    extra_layout(inputDir, outputDir)# 抽取layout
-
+    extra_layout(inputDir, outputDir)  # 抽取layout
 
     input_style_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values/styles.xml"  # style.xml文件
     output_style_file = r"/Users/heyue/Desktop/testPy/beeboxes/packages/apps/DataTool/app/src/main/res/values-1280x800/styles.xml"  # style.xml文件
-    extra_style(input_style_file, output_style_file)# 抽取style.xml
+    extra_style(input_style_file, output_style_file)  # 抽取style.xml
